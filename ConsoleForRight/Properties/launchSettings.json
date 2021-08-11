@@ -1,8 +1,7 @@
 {
   "profiles": {
     "ConsoleForRight": {
-      "commandName": "Project",
-      "commandLineArgs": "D:\\2.Software\\Tiama\\outs 1"
+      "commandName": "Project"
     }
   }
 }

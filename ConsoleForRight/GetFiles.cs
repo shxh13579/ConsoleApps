@@ -6,6 +6,11 @@ namespace ConsoleForRight
 {
     public class FileServer
     {
+        /// <summary>
+        /// get files list in all directory.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public List<string> GetFilesFromDirectory(string path)
         {
             path = path.TrimStart().TrimEnd();
@@ -19,6 +24,12 @@ namespace ConsoleForRight
             return result;
         }
 
+        /// <summary>
+        /// get files' loop
+        /// </summary>
+        /// <param name="pathList"></param>
+        /// <param name="files"></param>
+        /// <returns></returns>
         private List<string> GetAllFiles(string[] pathList, ref List<string> files)
         {
             var list = new List<string>();
@@ -32,6 +43,15 @@ namespace ConsoleForRight
             return list;
         }
 
+        /// <summary>
+        /// manipulate files
+        /// </summary>
+        /// <param name="inputPath"></param>
+        /// <param name="outputPath"></param>
+        /// <param name="success"></param>
+        /// <param name="sum"></param>
+        /// <param name="isCopy"></param>
+        /// <param name="overwrite"></param>
         private void ManipulateFiles(string inputPath, string outputPath, out int success, out int sum, bool isCopy, bool overwrite)
         {
             success = 0;
@@ -70,12 +90,27 @@ namespace ConsoleForRight
             }
         }
 
+        /// <summary>
+        /// move files.
+        /// </summary>
+        /// <param name="inputPath"></param>
+        /// <param name="outputPath"></param>
+        /// <param name="success"></param>
+        /// <param name="sum"></param>
+        /// <param name="overwrite"></param>
         public void MoveFile(string inputPath, string outputPath, out int success, out int sum, bool overwrite = false)
         {
             ManipulateFiles(inputPath, outputPath, out success, out sum, false, overwrite);
         }
 
-
+        /// <summary>
+        /// copy files.
+        /// </summary>
+        /// <param name="inputPath"></param>
+        /// <param name="outputPath"></param>
+        /// <param name="success"></param>
+        /// <param name="sum"></param>
+        /// <param name="overwrite"></param>
         public void CopyFile(string inputPath, string outputPath, out int success, out int sum, bool overwrite = false)
         {
             ManipulateFiles(inputPath, outputPath, out success, out sum, true, overwrite);
