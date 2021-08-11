@@ -5,17 +5,19 @@ namespace ConsoleForRight
     public class EditReg
     {
         /// <summary>
+        /// add system registry.
         /// It just be used in my windows system.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "<Pending>")]
         public void AddNewRightMenu(string path)
         {
             var parentReg = Registry.ClassesRoot;
-            //father level
+            //father level,MUIVerb's value is display words.
             var dirReg = parentReg.CreateSubKey(@"Directory\\shell\\OutputChildFiles");
             dirReg.SetValue("MUIVerb", "Output Child Files");
+
+            //ExtendedSubCommandsKey is a cascaded menu setting,the value must be this registry subkey.
             dirReg.SetValue("ExtendedSubCommandsKey", @"Directory\shell\OutputChildFiles");
-            //设置项值
             parentReg.CreateSubKey(@"Directory\\shell\\OutputChildFiles\\Shell");
 
             //move file menu reg.
@@ -29,8 +31,12 @@ namespace ConsoleForRight
             copyReg.SetValue("MUIVerb", "Copy All Files");
             var copyComReg = parentReg.CreateSubKey(@"Directory\\shell\\OutputChildFiles\\Shell\\copy\\command");
             copyComReg.SetValue("", path + " %V 1");
-            //设置command的值
             dirReg.Close();
+            moveReg.Close();
+            moveComReg.Close();
+            copyReg.Close();
+            copyComReg.Close();
+            parentReg.Close();
         }
     }
 }
