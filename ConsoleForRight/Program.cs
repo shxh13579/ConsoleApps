@@ -6,9 +6,6 @@ namespace ConsoleForRight
     {
         static void Main(string[] args)
         {
-            //add registry for rightclick menu.
-            //var regedit = new EditReg();
-            //regedit.AddNewRightMenu(@"D:\TestProject\TestApp\ConsoleForRight\bin\Debug\net5.0\ConsoleForRight.exe");
 
             var fileServer = new FileServer();
             Console.WriteLine("Please Enter your output path:");

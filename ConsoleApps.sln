@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApps\C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleForRight", "ConsoleForRight\ConsoleForRight.csproj", "{2A7C8C05-CD2B-4723-8D0B-60042399148D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistRightMenu", "RegistRightMenu\RegistRightMenu.csproj", "{CA0D86FA-02A4-4FF1-BEA4-551C6C21A9B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2A7C8C05-CD2B-4723-8D0B-60042399148D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A7C8C05-CD2B-4723-8D0B-60042399148D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A7C8C05-CD2B-4723-8D0B-60042399148D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA0D86FA-02A4-4FF1-BEA4-551C6C21A9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0D86FA-02A4-4FF1-BEA4-551C6C21A9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0D86FA-02A4-4FF1-BEA4-551C6C21A9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0D86FA-02A4-4FF1-BEA4-551C6C21A9B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

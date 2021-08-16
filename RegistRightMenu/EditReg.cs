@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-namespace ConsoleForRight
+namespace RegistRightMenu
 {
     public class EditReg
     {
